@@ -13,6 +13,7 @@ public class MainActivity extends Activity {
     private ListView listView;
     private List<Bean> mDatas;
     private DemoAdapter mAdapter;
+    private MyAdapter myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,8 +63,8 @@ public class MainActivity extends Activity {
         mDatas.add(bean);
 
         //为数据绑定适配器
-        mAdapter = new DemoAdapter(this,mDatas);
-
-        listView.setAdapter(mAdapter);
+        //mAdapter = new DemoAdapter(this,mDatas);
+        myAdapter =new MyAdapter(this,mDatas);
+        listView.setAdapter(myAdapter);
     }
 }
